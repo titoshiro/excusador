@@ -1,19 +1,19 @@
 window.onload = () => {
-  document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector("#the-excuse").innerHTML = generateExcuse();
+  document.querySelector("#boton").addEventListener("click", () => {
+    document.querySelector("#excusa").innerHTML = generadorExcusas();
   });
 };
 
-let generateExcuse = () => {
-  let subject = [ "Mi chancho","Mi caballo", " Mi perro","Mi gato"," Mi conejo", " Mi loro"];
-  let action = ["tomo mi ", "tiro mi", "dejo mi", "robo mi", "mordio mi"];
-  let possetion = ["tarea", "comida", "telefono", "zapato"];
-  let where = ["en la calle", "en mi casa", "en mi pieza"];
+let generadorExcusas = () => {
+  let familia = [ "Homero", " Marge","Lisa","Maggie", "Ayudante de santa"];
+  let accion = ["tomo mi ", "tiro mi", "dejo mi", "saco mi", "encontro mi"];
+  let objeto = ["tarea", "comida", "telefono", "skate"];
+  let donde = ["en la calle", "en la casa", "en el patio"];
 
-  let subjectIndex = Math.floor(Math.random() * subject.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let possetionIndex = Math.floor(Math.random() * possetion.length);
-  let whereIndex = Math.floor(Math.random() * where.length);
+  let familiaRandom = Math.floor(Math.random() * familia.length);
+  let accionRandom = Math.floor(Math.random() * accion.length);
+  let objetoRandom = Math.floor(Math.random() * objeto.length);
+  let dondeRandom = Math.floor(Math.random() * donde.length);
 
-  return (subject[subjectIndex] + ` ` +action[actionIndex] + ` ` + possetion[possetionIndex] + ` ` + where[whereIndex] );
+  return (familia[familiaRandom] + ` ` +accion[accionRandom] + ` ` + objeto[objetoRandom] + ` ` + donde[dondeRandom] );
 };
